@@ -56,6 +56,10 @@ void ScavTrap::attack(const std::string &target)
 
 void ScavTrap::guardGate()
 {
+    if (isDead())
+		return ;
+	if (isOutOfEnergy())
+		return ;
     if(guardingGate == false)
     {
         guardingGate = true;
