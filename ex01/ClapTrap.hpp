@@ -16,7 +16,7 @@ const std::string BLUE = "\033[38;5;129m";
 
 class ClapTrap
 {
-  private:
+  protected:
 	std::string name;
 	int hitPoints = 10;
 	int energyPoints = 10;
@@ -34,6 +34,8 @@ class ClapTrap
 	void setHitPoints(int newHitPoints);
 	void setEnergyPoints(int newEnergyPoints);
 	void setAttackDamage(int newAttackDamage);
+	// Getters
+
 	// Monitor Functions
 	bool isDead() const;
 	bool isOutOfEnergy() const;
@@ -41,5 +43,5 @@ class ClapTrap
 	void attack(const std::string &target);
 	void takeDamage(int amount);
 	void beRepaired(int amount);
-  void checkStatus();
+	void checkStatus();
 };
